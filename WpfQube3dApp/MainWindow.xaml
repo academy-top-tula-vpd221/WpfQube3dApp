@@ -40,21 +40,34 @@
                     </ModelVisual3D.Content>
                     <ModelVisual3D.Transform>
                         <Transform3DGroup>
-                            <RotateTransform3D>
+                            <RotateTransform3D CenterX="{Binding ElementName=centerX, Path=Value, Mode=TwoWay}"
+                                               CenterY="{Binding ElementName=centerY, Path=Value, Mode=TwoWay}"
+                                               CenterZ="{Binding ElementName=centerZ, Path=Value, Mode=TwoWay}">
                                 <RotateTransform3D.Rotation>
                                     <AxisAngleRotation3D x:Name="axisX" Axis="1,0,0"/>
                                 </RotateTransform3D.Rotation>
                             </RotateTransform3D>
-                            <RotateTransform3D>
+                            <RotateTransform3D CenterX="{Binding ElementName=centerX, Path=Value, Mode=TwoWay}"
+                                               CenterY="{Binding ElementName=centerY, Path=Value, Mode=TwoWay}"
+                                               CenterZ="{Binding ElementName=centerZ, Path=Value, Mode=TwoWay}">
                                 <RotateTransform3D.Rotation>
                                     <AxisAngleRotation3D x:Name="axisY" Axis="0,1,0"/>
                                 </RotateTransform3D.Rotation>
                             </RotateTransform3D>
-                            <RotateTransform3D>
+                            <RotateTransform3D CenterX="{Binding ElementName=centerX, Path=Value, Mode=TwoWay}"
+                                               CenterY="{Binding ElementName=centerY, Path=Value, Mode=TwoWay}"
+                                               CenterZ="{Binding ElementName=centerZ, Path=Value, Mode=TwoWay}">
                                 <RotateTransform3D.Rotation>
                                     <AxisAngleRotation3D x:Name="axisZ" Axis="0,0,1"/>
                                 </RotateTransform3D.Rotation>
                             </RotateTransform3D>
+                            <ScaleTransform3D CenterX="{Binding ElementName=centerX, Path=Value, Mode=TwoWay}"
+                                               CenterY="{Binding ElementName=centerY, Path=Value, Mode=TwoWay}"
+                                               CenterZ="{Binding ElementName=centerZ, Path=Value, Mode=TwoWay}"
+                                              ScaleX="{Binding ElementName=scewX, Path=Value}"
+                                              ScaleY="{Binding ElementName=scewY, Path=Value}"
+                                              ScaleZ="{Binding ElementName=scewZ, Path=Value}">
+                            </ScaleTransform3D>
                         </Transform3DGroup>
                         
                     </ModelVisual3D.Transform>
@@ -74,6 +87,27 @@
                 Minimum="0" 
                 Maximum="360"
                 Value="{Binding ElementName=axisZ, Path=Angle}"/>
+            
+            <Slider x:Name="centerX" 
+                Minimum="-5" 
+                Maximum="5"/>
+            <Slider x:Name="centerY" 
+                Minimum="-5" 
+                Maximum="5"/>
+            <Slider x:Name="centerZ" 
+                Minimum="-5" 
+                Maximum="5"/>
+
+            <Slider x:Name="scewX" 
+                Minimum="-5" 
+                Maximum="5"/>
+            <Slider x:Name="scewY" 
+                Minimum="-5" 
+                Maximum="5"/>
+            <Slider x:Name="scewZ" 
+                Minimum="-5" 
+                Maximum="5"/>
+
         </StackPanel>
     </Grid>
         
